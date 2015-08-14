@@ -197,10 +197,10 @@ https://test.region.igov.org.ua/wf-region/service/rest/process-definitions
 
 **HTTP Context: https://server:port/wf-region/service/rest/download_file_from_db?taskId=XXX&attachmentId=XXX&nFile=XXX**
 
-* {taskId} - ид задачи
-* {attachmentID} - ID прикрепленного файла
-* {nFile} - порядковый номер прикрепленного файла
-* {nID_Subject} - ID авторизированого субъекта (добавляется в запрос автоматически после аутентификации пользователя)
+* taskId - ид задачи
+* attachmentID - ID прикрепленного файла
+* nFile - порядковый номер прикрепленного файла
+* nID_Subject - ID авторизированого субъекта (добавляется в запрос автоматически после аутентификации пользователя)
 
 Пример:
 https://test.igov.org.ua/wf-region/service/rest/file/download_file_from_db?taskId=82596&attachmentId=6726532&nFile=7
@@ -1482,11 +1482,11 @@ https://test.igov.org.ua/wf-central/service/services/setServicesTree
 
 **HTTP Context: https://server:port/wf-region/service/rest/download_bp_timing?sID_BP_Name=XXX&sDateAt=XXX8&sDateTo=XXX**
 
-* {sID_BP_Name} - ID бизнес процесса
-* {sDateAt} - Дата начала периода для выборки в формате yyyy-MM-dd
-* {sDateTo} - Дата окончания периода для выборки в формате yyyy-MM-dd
-* {nRowsMax} - необязательный параметр. Максимальное значение завершенных задач для возврата. По умолчанию 1000.
-* {nRowStart} - Необязательный параметр. Порядковый номер завершенной задачи в списке для возврата. По умолчанию 0.
+* sID_BP_Name - ID бизнес процесса
+* sDateAt - Дата начала периода для выборки в формате yyyy-MM-dd
+* sDateTo - Дата окончания периода для выборки в формате yyyy-MM-dd
+* nRowsMax - необязательный параметр. Максимальное значение завершенных задач для возврата. По умолчанию 1000.
+* nRowStart - Необязательный параметр. Порядковый номер завершенной задачи в списке для возврата. По умолчанию 0.
 
 Метод возвращает .csv файл со информацией о завершенных задачах в указанном бизнес процессе за период.
 Формат выходного файла
@@ -1961,7 +1961,7 @@ https://test.region.igov.org.ua/wf-region/service/rest/file/downloadTasksData?&s
 
 **HTTP Context: https://test.region.igov.org.ua/wf-region/service/rest/getLoginBPs?sLogin=[userId]
 
-* {sLogin} - ID пользователя
+* sLogin - ID пользователя
 
 Метод возвращает json со списком бизнес процессов, которые пользователь может запускать, в формате 
 [
